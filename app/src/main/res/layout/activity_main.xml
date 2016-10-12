@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.teo.appcom.MainActivity">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/maps"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:id="@+id/map_btn"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/tel"
+        android:id="@+id/tel_btn"
+        android:layout_marginRight="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/sos"
+        android:id="@+id/sos_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/tel_btn"
+        android:layout_alignStart="@+id/tel_btn" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/sms"
+        android:id="@+id/sms_btn"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/map_btn"
+        android:layout_alignStart="@+id/map_btn" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/contacts"
+        android:id="@+id/con_btn"
+        android:layout_alignTop="@+id/sms_btn"
+        android:layout_alignLeft="@+id/sos_btn"
+        android:layout_alignStart="@+id/sos_btn" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/medicine"
+        android:id="@+id/med_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/sms_btn"
+        android:layout_alignStart="@+id/sms_btn" />
+</RelativeLayout>
