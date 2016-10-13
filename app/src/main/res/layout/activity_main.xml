@@ -12,6 +12,7 @@
     tools:context="com.example.teo.appcom.MainActivity">
 
     <ImageButton
+        android:background="@null"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/maps"
@@ -23,6 +24,7 @@
         android:layout_alignParentStart="true" />
 
     <ImageButton
+        android:background="@null"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/tel"
@@ -34,6 +36,7 @@
         android:layout_alignParentEnd="true" />
 
     <ImageButton
+        android:background="@null"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/sos"
@@ -43,6 +46,7 @@
         android:layout_alignStart="@+id/tel_btn" />
 
     <ImageButton
+        android:background="@null"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/sms"
@@ -52,6 +56,7 @@
         android:layout_alignStart="@+id/map_btn" />
 
     <ImageButton
+        android:background="@null"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/contacts"
@@ -61,6 +66,7 @@
         android:layout_alignStart="@+id/sos_btn" />
 
     <ImageButton
+        android:background="@null"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/medicine"
