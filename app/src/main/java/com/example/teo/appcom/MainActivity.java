@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageButton tel_btn;
     private ImageButton map_btn;
+    private ImageButton sos_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         tel_btn = (ImageButton) findViewById(R.id.tel_btn);
         map_btn = (ImageButton) findViewById(R.id.map_btn);
+        sos_btn = (ImageButton) findViewById(R.id.sos_btn);
 
         tel_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +40,18 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        sos_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this,EmergencyActivity.class);
+                startActivity(i);
+            }
+        });
+
+
+
+
 
 
     }
