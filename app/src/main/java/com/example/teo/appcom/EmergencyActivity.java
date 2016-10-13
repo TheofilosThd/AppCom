@@ -35,7 +35,7 @@ public class EmergencyActivity extends AppCompatActivity {
         amb_button = (ImageButton) findViewById(R.id.amb_btn);
         torch_btn = (ImageButton) findViewById(R.id.torch_btn);
 
-        clickBtn(police_btn,"1000");
+        clickBtn(police_btn,"10000");
         clickBtn(fire_btn,"1999");
         clickBtn(amb_button,"1666");
 
