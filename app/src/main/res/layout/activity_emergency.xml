@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/alarm"
-        android:id="@+id/sos_btn"
+        android:id="@+id/torch_btn"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
@@ -47,6 +47,6 @@
         app:srcCompat="@drawable/fire"
         android:id="@+id/fire_btn"
         android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/sos_btn"
-        android:layout_alignStart="@+id/sos_btn" />
+        android:layout_alignLeft="@+id/torch_btn"
+        android:layout_alignStart="@+id/torch_btn" />
 </RelativeLayout>

@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/sos"
-        android:id="@+id/sos_btn"
+        android:id="@+id/torch_btn"
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/tel_btn"
         android:layout_alignStart="@+id/tel_btn" />
@@ -62,8 +62,8 @@
         app:srcCompat="@drawable/contacts"
         android:id="@+id/con_btn"
         android:layout_alignTop="@+id/sms_btn"
-        android:layout_alignLeft="@+id/sos_btn"
-        android:layout_alignStart="@+id/sos_btn" />
+        android:layout_alignLeft="@+id/torch_btn"
+        android:layout_alignStart="@+id/torch_btn" />
 
     <ImageButton
         android:background="@null"
