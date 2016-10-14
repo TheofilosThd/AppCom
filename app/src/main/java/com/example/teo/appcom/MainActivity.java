@@ -15,9 +15,9 @@ import android.widget.ImageButton;
 public class MainActivity extends AppCompatActivity {
 
     private ImageButton tel_btn;
+    private ImageButton sms_btn;
     private ImageButton map_btn;
     private ImageButton sos_btn;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         tel_btn = (ImageButton) findViewById(R.id.tel_btn);
+        sms_btn = (ImageButton) findViewById(R.id.sms_btn);
         map_btn = (ImageButton) findViewById(R.id.map_btn);
         sos_btn = (ImageButton) findViewById(R.id.torch_btn);
 
@@ -35,6 +36,16 @@ public class MainActivity extends AppCompatActivity {
                 Intent callIntent = new Intent(Intent.ACTION_DIAL);
                 callIntent.setData(Uri.parse("tel:"));
                 startActivity(callIntent);
+            }
+        });
+
+        sms_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                smsIntent.setData(Uri.parse("smsto:"));
+                smsIntent.setType("vnd.android-dir/mms-sms");
+                startActivity(smsIntent);
             }
         });
 
