@@ -39,16 +39,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        sms_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent smsIntent = new Intent(Intent.ACTION_VIEW);
-                smsIntent.setData(Uri.parse("smsto:"));
-                smsIntent.setType("vnd.android-dir/mms-sms");
-                startActivity(smsIntent);
-            }
-        });
-
         map_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,6 +51,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, EmergencyActivity.class);
+                startActivity(i);
+            }
+        });
+
+        sms_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this,SmsActivity.class);
                 startActivity(i);
             }
         });

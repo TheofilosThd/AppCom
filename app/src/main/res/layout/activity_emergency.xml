@@ -33,42 +33,6 @@
         android:layout_alignParentStart="true"
         tools:ignore="ContentDescription" />
 
-    <ImageButton
-        android:background="@null"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/alarm"
-        android:id="@+id/torch_btn"
-        android:layout_alignTop="@+id/fire_btn"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="11dp"
-        android:layout_marginEnd="11dp"
-        tools:ignore="ContentDescription" />
-
-    <ImageButton
-        android:background="@null"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ote"
-        android:id="@+id/ote_btn"
-        android:layout_alignTop="@+id/taxi_btn"
-        android:layout_alignLeft="@+id/torch_btn"
-        android:layout_alignStart="@+id/torch_btn"
-        tools:ignore="ContentDescription" />
-
-    <ImageButton
-        android:background="@null"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/taxi"
-        android:id="@+id/taxi_btn"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="13dp"
-        android:contentDescription=""
-        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:background="@null"
@@ -76,9 +40,20 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/fire"
         android:id="@+id/fire_btn"
-        android:layout_below="@+id/police_btn"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="28dp"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"
+        android:layout_below="@+id/amb_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp" />
+
+    <ImageButton
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/alarm"
+        android:id="@+id/torch_btn"
+        tools:ignore="ContentDescription"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/fire_btn"
+        android:layout_alignStart="@+id/fire_btn"
+        android:layout_marginBottom="30dp" />
 </RelativeLayout>
