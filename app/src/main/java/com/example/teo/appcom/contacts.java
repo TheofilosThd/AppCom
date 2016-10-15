@@ -17,6 +17,7 @@ public class contacts extends AppCompatActivity {
     private ImageButton ote_btn;
     private ImageButton taxi_btn;
     private ImageButton home_btn;
+    private ImageButton addcnt_btn;
 
 
 
@@ -29,6 +30,7 @@ public class contacts extends AppCompatActivity {
         taxi_btn = (ImageButton) findViewById(R.id.taxi_btn);
         ote_btn = (ImageButton) findViewById(R.id.ote_btn);
         home_btn = (ImageButton) findViewById(R.id.home_btn);
+        addcnt_btn = (ImageButton) findViewById(R.id.addcnt_btn);
 
         clickBtn(taxi_btn, "99999");
         clickBtn(ote_btn, "118888");
@@ -38,6 +40,16 @@ public class contacts extends AppCompatActivity {
             public void onClick(View v) {
 
                 finish();
+            }
+        });
+
+
+
+        addcnt_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            Intent i = new Intent(contacts.this, addContact.class);
+            startActivity(i);
             }
         });
     }

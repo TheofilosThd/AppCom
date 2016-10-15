@@ -45,7 +45,8 @@
         <activity android:name=".EmergencyActivity" />
         <activity android:name=".SmsActivity" />
         <activity android:name=".SendSmsActivity" />
-        <activity android:name=".TelActivity"></activity>
+        <activity android:name=".TelActivity" />
+        <activity android:name=".addContact"></activity>
     </application>
 
 </manifest>

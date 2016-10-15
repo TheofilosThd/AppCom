@@ -44,7 +44,7 @@ public class TelActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 tel_string+="0";
-                telephone_input.setText(tel_string);
+                telephone_input.setText("123");
             }
         });
 
