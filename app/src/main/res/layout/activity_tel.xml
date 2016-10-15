@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_tel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.teo.appcom.TelActivity">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/n3"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:id="@+id/n3_btn"
+        android:layout_alignTop="@+id/n2_btn"
+        android:layout_toRightOf="@+id/n2_btn"
+        android:layout_toEndOf="@+id/n2_btn" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/n4"
+        android:layout_marginTop="18dp"
+        android:id="@+id/n4_btn"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_below="@+id/n2_btn"
+        android:layout_toLeftOf="@+id/n2_btn"
+        android:layout_toStartOf="@+id/n2_btn" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/n5"
+        android:id="@+id/n5_btn"
+        android:layout_alignTop="@+id/n4_btn"
+        android:layout_toRightOf="@+id/n4_btn"
+        android:layout_toEndOf="@+id/n4_btn" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/n6"
+        android:id="@+id/n6_btn"
+        android:layout_alignTop="@+id/n5_btn"
+        android:layout_alignLeft="@+id/n3_btn"
+        android:layout_alignStart="@+id/n3_btn" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/n7"
+        android:layout_marginTop="18dp"
+        android:id="@+id/n7_btn"
+        android:layout_below="@+id/n4_btn"
+        android:layout_alignLeft="@+id/n4_btn"
+        android:layout_alignStart="@+id/n4_btn" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/n8"
+        android:id="@+id/n8_btn"
+        android:layout_alignTop="@+id/n7_btn"
+        android:layout_toRightOf="@+id/n4_btn"
+        android:layout_toEndOf="@+id/n4_btn" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/n9"
+        android:id="@+id/n9_btn"
+        android:layout_alignTop="@+id/n8_btn"
+        android:layout_alignLeft="@+id/n6_btn"
+        android:layout_alignStart="@+id/n6_btn" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/n2"
+        android:layout_marginTop="23dp"
+        android:id="@+id/n2_btn"
+        android:layout_below="@+id/telephone_dialer"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/n1"
+        android:id="@+id/n1_btn"
+        android:layout_above="@+id/n4_btn"
+        android:layout_alignLeft="@+id/n4_btn"
+        android:layout_alignStart="@+id/n4_btn" />
+
+    <TextView
+        android:background="@color/white"
+        android:layout_width="340dp"
+        android:layout_height="100dp"
+        android:id="@+id/telephone_dialer"
+        android:layout_marginTop="21dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
