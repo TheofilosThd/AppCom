@@ -35,9 +35,13 @@ public class MainActivity extends AppCompatActivity {
         tel_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                /*
                 Intent callIntent = new Intent(Intent.ACTION_DIAL);
                 callIntent.setData(Uri.parse("tel:"));
                 startActivity(callIntent);
+                */
+                Intent i = new Intent(MainActivity.this,TelActivity.class);
+                startActivity(i);
             }
         });
 
