@@ -1,0 +1,63 @@
+package com.example.teo.appcom;
+
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.hardware.Camera;
+import android.net.Uri;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
+
+public class contacts extends AppCompatActivity {
+
+    private ImageButton ote_btn;
+    private ImageButton taxi_btn;
+    private ImageButton home_btn;
+
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_contacts);
+
+        taxi_btn = (ImageButton) findViewById(R.id.taxi_btn);
+        ote_btn = (ImageButton) findViewById(R.id.ote_btn);
+        home_btn = (ImageButton) findViewById(R.id.home_btn);
+
+        clickBtn(taxi_btn, "99999");
+        clickBtn(ote_btn, "118888");
+
+        home_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(contacts.this, MainActivity.class);
+                startActivity(i);
+            }
+        });
+    }
+
+    public void makeCall(String telephone) {
+        String number = telephone;
+        Intent intent = new Intent(Intent.ACTION_CALL);
+        intent.setData(Uri.parse("tel:" + number));
+        startActivity(intent);
+    }
+
+    public void clickBtn(ImageButton btn, final String tel) {
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                makeCall(tel);
+            }
+        });
+    }
+
+
+
+}
