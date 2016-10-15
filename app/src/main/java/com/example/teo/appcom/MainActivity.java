@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         sos_btn = (ImageButton) findViewById(R.id.torch_btn);
         con_btn = (ImageButton) findViewById(R.id.con_btn);
 
+
         tel_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         con_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, contacts.class);
+                Intent i = new Intent(MainActivity.this,contacts.class);
                 startActivity(i);
             }
         });

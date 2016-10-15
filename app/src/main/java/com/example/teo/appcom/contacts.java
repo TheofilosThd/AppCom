@@ -35,9 +35,9 @@ public class contacts extends AppCompatActivity {
 
         home_btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent i = new Intent(contacts.this, MainActivity.class);
-                startActivity(i);
+            public void onClick(View v) {
+
+                finish();
             }
         });
     }

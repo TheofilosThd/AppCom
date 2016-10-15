@@ -17,9 +17,8 @@ public class EmergencyActivity extends AppCompatActivity {
     private ImageButton police_btn;
     private ImageButton fire_btn;
     private ImageButton amb_button;
-    private ImageButton ote_btn;
-    private ImageButton taxi_btn;
     private ImageButton torch_btn;
+    private ImageButton home_btn;
 
     private Camera camera;
     private boolean isFlashOn;
@@ -35,15 +34,15 @@ public class EmergencyActivity extends AppCompatActivity {
         police_btn= (ImageButton)findViewById(R.id.police_btn);
         fire_btn =(ImageButton) findViewById(R.id.fire_btn);
         amb_button = (ImageButton) findViewById(R.id.amb_btn);
-        taxi_btn = (ImageButton) findViewById(R.id.taxi_btn);
-        ote_btn = (ImageButton) findViewById(R.id.ote_btn);
         torch_btn = (ImageButton) findViewById(R.id.torch_btn);
+        home_btn = (ImageButton) findViewById(R.id.home_btn);
 
         clickBtn(police_btn,"1000");
         clickBtn(fire_btn,"1999");
         clickBtn(amb_button,"1666");
-        clickBtn(taxi_btn,"99999");
-        clickBtn(ote_btn,"118888");
+        clickBtn(amb_button,"1666");
+
+
 
 
         hasFlash = getApplicationContext().getPackageManager()
@@ -79,6 +78,14 @@ public class EmergencyActivity extends AppCompatActivity {
                     // turn on flash
                     turnOnFlash();
                 }
+            }
+        });
+
+        home_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                finish();
             }
         });
     }
