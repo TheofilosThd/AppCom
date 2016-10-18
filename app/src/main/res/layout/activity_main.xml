@@ -11,6 +11,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.teo.appcom.MainActivity">
 
+
+
     <ImageButton
         android:background="@null"
         android:layout_width="wrap_content"
@@ -74,4 +76,5 @@
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/sms_btn"
         android:layout_alignStart="@+id/sms_btn" />
+
 </RelativeLayout>

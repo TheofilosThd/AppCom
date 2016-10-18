@@ -1,16 +1,16 @@
 package com.example.teo.appcom;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
+
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.hardware.Camera;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.text.Html;
 import android.view.View;
 import android.widget.ImageButton;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+import java.util.TimeZone;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton map_btn;
     private ImageButton sos_btn;
     private ImageButton con_btn;
+    private ImageButton med_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,18 @@ public class MainActivity extends AppCompatActivity {
         map_btn = (ImageButton) findViewById(R.id.map_btn);
         sos_btn = (ImageButton) findViewById(R.id.torch_btn);
         con_btn = (ImageButton) findViewById(R.id.con_btn);
+        med_btn = (ImageButton) findViewById(R.id.med_btn);
+
+
+
+        Calendar c = Calendar.getInstance(TimeZone.getTimeZone("GMT"),Locale.getDefault());
+        SimpleDateFormat df = new SimpleDateFormat("  dd/MM/yyyy HH:mm ");
+        String currentDate = df.format(c.getTime());
+
+
+
+
+        getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#000000\" >" +currentDate + "</font>")));
 
 
         tel_btn.setOnClickListener(new View.OnClickListener() {
@@ -77,6 +90,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        med_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this,MedicineActivity.class);
+                startActivity(i);
+            }
+        });
 
     }
 
