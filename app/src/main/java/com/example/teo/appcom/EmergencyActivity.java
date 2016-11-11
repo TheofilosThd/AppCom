@@ -6,11 +6,13 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.net.Uri;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class EmergencyActivity extends AppCompatActivity {
 
@@ -24,6 +26,8 @@ public class EmergencyActivity extends AppCompatActivity {
     private boolean isFlashOn;
     private boolean hasFlash;
     Camera.Parameters params;
+    private String sos_phone = "2";
+    private String sos_message = "HELP!!!";
 
 
     @Override
@@ -31,18 +35,16 @@ public class EmergencyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emergency);
 
-        police_btn= (ImageButton)findViewById(R.id.police_btn);
-        fire_btn =(ImageButton) findViewById(R.id.fire_btn);
+        police_btn = (ImageButton) findViewById(R.id.police_btn);
+        fire_btn = (ImageButton) findViewById(R.id.fire_btn);
         amb_button = (ImageButton) findViewById(R.id.amb_btn);
         torch_btn = (ImageButton) findViewById(R.id.torch_btn);
-        home_btn = (ImageButton) findViewById(R.id.home_btn);
-
-        clickBtn(police_btn,"1000");
-        clickBtn(fire_btn,"1999");
-        clickBtn(amb_button,"1666");
-        clickBtn(amb_button,"1666");
 
 
+        clickBtn(police_btn, "1000");
+        clickBtn(fire_btn, "1999");
+        clickBtn(amb_button, "1666");
+        clickBtn(amb_button, "1666");
 
 
         hasFlash = getApplicationContext().getPackageManager()
@@ -77,29 +79,27 @@ public class EmergencyActivity extends AppCompatActivity {
                 } else {
                     // turn on flash
                     turnOnFlash();
+                    android.telephony.SmsManager smsManager = android.telephony.SmsManager.getDefault();
+                    smsManager.sendTextMessage(sos_phone, null, sos_message, null, null);
+                    Toast.makeText(getApplicationContext(), "Emergency signal  sent.", Toast.LENGTH_LONG).show();
                 }
+
+
             }
         });
 
-        home_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                finish();
-            }
-        });
     }
 
 
-
-    public void makeCall(String telephone){
+    public void makeCall(String telephone) {
         String number = telephone;
         Intent intent = new Intent(Intent.ACTION_CALL);
-        intent.setData(Uri.parse("tel:" +number));
+        intent.setData(Uri.parse("tel:" + number));
         startActivity(intent);
     }
 
-    public void clickBtn(ImageButton btn, final String tel){
+    public void clickBtn(ImageButton btn, final String tel) {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -132,6 +132,7 @@ public class EmergencyActivity extends AppCompatActivity {
             camera.startPreview();
             isFlashOn = true;
 
+
         }
 
     }
@@ -152,6 +153,49 @@ public class EmergencyActivity extends AppCompatActivity {
 
         }
     }
+
+    public void sos() {
+
+        String myString = "111000111";
+        Handler handler = new Handler();
+
+
+        for (int x = 0; x < myString.length(); x++) {
+            if (myString.charAt(x) == '1') {
+                handler.postDelayed(new Runnable() {
+                    public void run() {
+                        params.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
+                        camera.setParameters(params);
+                        camera.startPreview();
+                    }
+                }, 1000);
+
+            } else {
+
+                handler.postDelayed(new Runnable() {
+                    public void run() {
+                        params.setFlashMode(Camera.Parameters.FLASH_MODE_OFF);
+                        camera.setParameters(params);
+                    }
+                }, 1000);
+
+            }
+
+
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    params.setFlashMode(Camera.Parameters.FLASH_MODE_OFF);
+                    camera.setParameters(params);
+                }
+            }, 1000);
+        }
+
+
+    params.setFlashMode(Camera.Parameters.FLASH_MODE_OFF);
+    camera.setParameters(params);
+}
+
+
 
 
 }

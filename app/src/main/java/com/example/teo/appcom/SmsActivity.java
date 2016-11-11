@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,7 +18,7 @@ public class SmsActivity extends AppCompatActivity {
 
     private TextView sms_input;
     private ImageButton mic_btn;
-    private ImageButton send_btn;
+    private Button send_btn;
     protected static final int RESULT_SPEECH =1;
     public String sms_string;
 
@@ -28,7 +29,7 @@ public class SmsActivity extends AppCompatActivity {
 
         sms_input = (TextView) findViewById(R.id.sms_input);
         mic_btn = (ImageButton) findViewById(R.id.mic_btn);
-        send_btn = (ImageButton) findViewById(R.id.send_btn);
+        send_btn = (Button) findViewById(R.id.send_btn);
 
         mic_btn.setOnClickListener(new View.OnClickListener() {
             @Override

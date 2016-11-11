@@ -8,7 +8,7 @@ import android.widget.TextView;
 public class addContact extends AppCompatActivity {
 
     private TextView name_input;
-    private TextView tel_input;
+
     String name_string;
 
 
@@ -22,7 +22,7 @@ public class addContact extends AppCompatActivity {
 
 
 
-        tel_input = (TextView) findViewById(R.id.telephone_input);
+
         name_input = (TextView) findViewById(R.id.tel_input);
 
 

@@ -1,18 +1,13 @@
 package com.example.teo.appcom;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.hardware.Camera;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class contacts extends AppCompatActivity {
+public class ContactsActivity extends AppCompatActivity {
 
     private ImageButton ote_btn;
     private ImageButton taxi_btn;
@@ -48,7 +43,7 @@ public class contacts extends AppCompatActivity {
         addcnt_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            Intent i = new Intent(contacts.this, addContact.class);
+            Intent i = new Intent(ContactsActivity.this, addContact.class);
             startActivity(i);
             }
         });

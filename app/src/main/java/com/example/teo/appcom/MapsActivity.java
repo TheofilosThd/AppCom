@@ -1,7 +1,10 @@
 package com.example.teo.appcom;
 
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.location.Location;
+import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
 import android.support.v4.app.FragmentActivity;
@@ -49,6 +52,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         mMap.setMyLocationEnabled(true);
+
+        Intent intent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("http://maps.google.com/maps?f=d&daddr=37.994038, 23.732468"));
+        intent.setComponent(new ComponentName("com.google.android.apps.maps",
+                "com.google.android.maps.MapsActivity"));
+        startActivity(intent);
         // Add a marker in Sydney and move the camera
         //LatLng sydney = new LatLng(-34, 151);
         //mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));

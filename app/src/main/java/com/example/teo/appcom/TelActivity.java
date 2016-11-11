@@ -44,7 +44,7 @@ public class TelActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 tel_string+="0";
-                telephone_input.setText("123");
+                telephone_input.setText(tel_string);
             }
         });
 
@@ -132,9 +132,12 @@ public class TelActivity extends AppCompatActivity {
         delete_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String temp_string = deleteLast(telephone_input.getText().toString());
-                tel_string=temp_string;
-                telephone_input.setText(temp_string);
+                if(tel_string.length() !=0) {
+                    String temp_string = deleteLast(telephone_input.getText().toString());
+                    tel_string=temp_string;
+                    telephone_input.setText(temp_string);
+                }
+
             }
         });
     }

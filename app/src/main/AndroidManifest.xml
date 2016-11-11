@@ -12,6 +12,8 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
 
     <uses-feature android:name="android.hardware.camera" />
 
@@ -47,7 +49,8 @@
         <activity android:name=".SmsActivity" />
         <activity android:name=".SendSmsActivity" />
         <activity android:name=".TelActivity" />
-        <activity android:name=".MedicineActivity"></activity>
+        <activity android:name=".MedicineActivity" />
+        <activity android:name=".TestActivity"></activity>
     </application>
 
 </manifest>
