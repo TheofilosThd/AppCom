@@ -3,8 +3,10 @@
     <color name="colorPrimary">#ffffff</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="bg">#0CD6FF</color>
+    <color name="bg">#0cd6ff</color>
     <color name="white">#ffffff</color>
-    <color name="bg_gradient_start">#31244e</color>
+    <color name="bg_gradient_start">#aa5742</color>
     <color name="bg_gradient_end">#6b394c</color>
+    <color name="green">#d4f502</color>
+    <color name="purple">#d4b8db</color>
 </resources>

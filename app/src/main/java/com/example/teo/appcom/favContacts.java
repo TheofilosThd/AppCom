@@ -46,13 +46,16 @@ public class favContacts extends AppCompatActivity {
         for (int i = 0; i < 6; i++){
             contact[i] = new ImageButton(this);
             contactt[i] = new TextView(this);
+            TextView nline = new TextView(this);
             contactt[i].setText(name[i]);
             contactt[i].setTextSize(30);
             contactt[i].setGravity(Gravity.CENTER);
             contact[i].setImageResource(pic[i]);
             contact[i].setBackgroundColor(0x0000FF10);
+            nline.setText(" \n");
             dynamicalContacts.addView(contact[i]);
             dynamicalContacts.addView(contactt[i]);
+            dynamicalContacts.addView(nline);
             clickBtn(contact[i], number[i]);
         }
 

@@ -12,19 +12,6 @@
     tools:context="com.example.teo.appcom.MainActivity">
 
 
-
-    <ImageButton
-        android:background="@null"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/maps"
-        android:layout_marginLeft="11dp"
-        android:layout_marginStart="11dp"
-        android:id="@+id/map_btn"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <ImageButton
         android:background="@null"
         android:layout_width="wrap_content"
@@ -41,21 +28,23 @@
         android:background="@null"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/sos"
-        android:id="@+id/torch_btn"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/tel_btn"
-        android:layout_alignStart="@+id/tel_btn" />
-
-    <ImageButton
-        android:background="@null"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         app:srcCompat="@drawable/sms"
         android:id="@+id/sms_btn"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/textView2"
         android:layout_alignLeft="@+id/map_btn"
-        android:layout_alignStart="@+id/map_btn" />
+        android:layout_alignStart="@+id/map_btn"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:text="Χάρτες"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="38dp"
+        android:layout_marginEnd="38dp"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/map_btn"
+        android:layout_alignRight="@+id/map_btn"
+        android:layout_alignEnd="@+id/map_btn" />
 
     <ImageButton
         android:background="@null"
@@ -64,8 +53,19 @@
         app:srcCompat="@drawable/contacts"
         android:id="@+id/con_btn"
         android:layout_alignTop="@+id/sms_btn"
-        android:layout_alignLeft="@+id/torch_btn"
-        android:layout_alignStart="@+id/torch_btn" />
+        android:layout_alignLeft="@+id/tel_btn"
+        android:layout_alignStart="@+id/tel_btn" />
+
+    <ImageButton
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/sos"
+        android:id="@+id/torch_btn"
+        android:layout_below="@+id/textView6"
+        android:layout_alignLeft="@+id/con_btn"
+        android:layout_alignStart="@+id/con_btn"
+        android:layout_marginTop="12dp" />
 
     <ImageButton
         android:background="@null"
@@ -73,8 +73,67 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/medicine"
         android:id="@+id/med_btn"
-        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/torch_btn"
         android:layout_alignLeft="@+id/sms_btn"
         android:layout_alignStart="@+id/sms_btn" />
+
+    <TextView
+        android:text="Τηλέφωνο"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="19dp"
+        android:layout_marginEnd="19dp"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/tel_btn"
+        android:layout_alignRight="@+id/tel_btn"
+        android:layout_alignEnd="@+id/tel_btn" />
+
+    <TextView
+        android:text="Επαφές"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:layout_below="@+id/con_btn"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4" />
+
+    <TextView
+        android:text="SOS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView9"
+        android:layout_below="@+id/torch_btn"
+        android:layout_alignLeft="@+id/textView6"
+        android:layout_alignStart="@+id/textView6" />
+
+    <TextView
+        android:text="Φάρμακα"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView8"
+        android:layout_below="@+id/med_btn"
+        android:layout_alignRight="@+id/textView5"
+        android:layout_alignEnd="@+id/textView5" />
+
+    <TextView
+        android:text="Μύνηματα"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/sms_btn"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2" />
+
+    <ImageButton
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/maps"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:id="@+id/map_btn"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

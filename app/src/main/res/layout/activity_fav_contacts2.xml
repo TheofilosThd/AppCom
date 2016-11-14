@@ -8,11 +8,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/bg_gradient_start"
     tools:context="com.example.teo.appcom.favContacts">
 
 <RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/bg_gradient_start"
+    >
 
 
     <LinearLayout
@@ -38,6 +41,7 @@
         android:fontFamily="sans-serif"
         android:textSize="24sp"
         android:textStyle="normal|bold"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:background="@color/bg_gradient_start" />
 </RelativeLayout>
     </ScrollView>
