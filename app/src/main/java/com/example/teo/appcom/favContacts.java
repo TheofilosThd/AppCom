@@ -26,7 +26,7 @@ public class favContacts extends AppCompatActivity {
 
 
 
-    @Override
+     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fav_contacts2);
@@ -38,7 +38,7 @@ public class favContacts extends AppCompatActivity {
         ImageButton[] contact = new ImageButton[6];
         TextView[] contactt = new TextView[6];
         String[] number = {"11", "22", "33", "44" ,"55", "66"};
-        String[] name = {"Gios", "Gios 2", "Korh", "Eggonh" ,"Antwnis", "Kleidaras"};
+        String[] name = {"ΓΕΩΡΓΙΑ", "ΣΟΥΛΑ", "ΓΙΩΡΓΟΣ", "ΧΡΗΣΤΟΣ" ,"ΘΕΟΦΙΛΟΣ", "ΚΩΝΣΤΑΝΤΙΝΑ"};
         int[] pic = new int[] { R.drawable.person1, R.drawable.person2, R.drawable.person3, R.drawable.person4, R.drawable.person5, R.drawable.person6 };
 
 

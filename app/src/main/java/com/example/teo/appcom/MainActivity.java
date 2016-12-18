@@ -4,6 +4,7 @@ package com.example.teo.appcom;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.annotation.DrawableRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
@@ -47,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#000000\" >" +currentDate + "</font>")));
-
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+       // getSupportActionBar().setIcon(R.drawable.setting);
 
         tel_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         con_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this,ContactsActivity.class);
+                Intent i = new Intent(MainActivity.this,favContacts.class);
                 startActivity(i);
             }
         });

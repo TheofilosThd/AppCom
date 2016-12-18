@@ -5,7 +5,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="speech_prompt">Say something&#8230;</string>
     <string name="speech_not_supported">Sorry! Your device doesn\'t support speech input</string>
-    <string name="tap_on_mic">Tap on mic to speak</string>
+    <string name="tap_on_mic">Πατήστε για να μιλήσετε</string>
     <string name="title_activity_fav_contacts">favContacts</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"

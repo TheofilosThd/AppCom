@@ -2,6 +2,7 @@ package com.example.teo.appcom;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.Image;
 import android.net.Uri;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
@@ -16,7 +17,7 @@ public class TelActivity extends AppCompatActivity {
 
     private TextView telephone_input;
     private ImageButton n0_btn,n1_btn,n2_btn,n3_btn,n4_btn,n5_btn,n6_btn,n7_btn,n8_btn,n9_btn;
-    private Button call_btn,delete_btn;
+    private ImageButton call_btn,delete_btn;
     String tel_string="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +35,8 @@ public class TelActivity extends AppCompatActivity {
         n7_btn =(ImageButton) findViewById(R.id.n7_btn);
         n8_btn =(ImageButton) findViewById(R.id.n8_btn);
         n9_btn =(ImageButton) findViewById(R.id.n9_btn);
-        call_btn =(Button) findViewById(R.id.call_btn);
-        delete_btn = (Button) findViewById(R.id.delete_btn);
+        call_btn =(ImageButton) findViewById(R.id.call_btn);
+        delete_btn = (ImageButton) findViewById(R.id.delete_btn);
 
         telephone_input.setTypeface(null, Typeface.BOLD_ITALIC);
         telephone_input.setTextSize(53);
