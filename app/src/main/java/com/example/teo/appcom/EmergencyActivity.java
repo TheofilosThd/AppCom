@@ -1,10 +1,14 @@
 package com.example.teo.appcom;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +17,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import static android.R.id.message;
 
 public class EmergencyActivity extends AppCompatActivity {
 
@@ -34,7 +40,7 @@ public class EmergencyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emergency);
-
+        getSupportActionBar().setTitle("");
         police_btn = (ImageButton) findViewById(R.id.police_btn);
         fire_btn = (ImageButton) findViewById(R.id.fire_btn);
         amb_button = (ImageButton) findViewById(R.id.amb_btn);
@@ -80,8 +86,11 @@ public class EmergencyActivity extends AppCompatActivity {
                     // turn on flash
                     turnOnFlash();
                     android.telephony.SmsManager smsManager = android.telephony.SmsManager.getDefault();
+                    String loc = myLoc();
+                    sos_message = "ΚΙΝΔΥΝΕΥΩ!!! Βρίσκομαι στην τοποθεσία : "+loc;
                     smsManager.sendTextMessage(sos_phone, null, sos_message, null, null);
-                    Toast.makeText(getApplicationContext(), "Emergency signal  sent.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "ΣΤΑΛΘΗΚΕ ΣΗΜΑ ΚΙΝΔΥΝΟΥ.", Toast.LENGTH_LONG).show();
+
                 }
 
 
@@ -195,6 +204,25 @@ public class EmergencyActivity extends AppCompatActivity {
     camera.setParameters(params);
 }
 
+
+    public  String myLoc(){
+        LocationManager locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 2000, 10, new LocationListener() {
+            @Override
+            public void onStatusChanged(String s, int i, Bundle bundle) {}
+            @Override
+            public void onProviderEnabled(String s) {}
+            @Override
+            public void onProviderDisabled(String s) {}
+            @Override
+            public void onLocationChanged(final Location location) {}
+        });
+        Location myLocation = locationManager.getLastKnownLocation(LocationManager.PASSIVE_PROVIDER);
+        double longitude = myLocation.getLongitude();
+        double latitude = myLocation.getLatitude();
+        String message="https://www.google.co.id/maps/@"+latitude+","+longitude;
+        return message;
+    }
 
 
 

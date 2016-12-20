@@ -34,6 +34,28 @@
         tools:ignore="ContentDescription" />
 
 
+    <TextView
+        android:text="ΑΣΤΥΝΟΜΙΑ"
+        android:textColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7"
+        android:layout_below="@+id/police_btn"
+        android:layout_alignRight="@+id/police_btn"
+        android:layout_alignEnd="@+id/police_btn"
+        android:layout_marginRight="23dp"
+        android:layout_marginEnd="23dp" />
+
+    <TextView
+        android:text="ΑΣΘΕΝΟΦΟΡΟ"
+        android:textColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView7"
+        android:layout_toEndOf="@+id/fire_btn"
+        android:id="@+id/textView10"
+        android:layout_toRightOf="@+id/fire_btn" />
+
     <ImageButton
         android:background="@null"
         android:layout_width="wrap_content"
@@ -41,9 +63,28 @@
         app:srcCompat="@drawable/alarm"
         android:id="@+id/torch_btn"
         tools:ignore="ContentDescription"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/textView11"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="17dp" />
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:text="ΚΙΝΔΥΝΟΣ"
+        android:textColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView12"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="ΠΥΡΟΣΒΕΣΤΙΚΗ"
+        android:textColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:id="@+id/textView11"
+        android:layout_below="@+id/fire_btn"
+        android:layout_centerHorizontal="true" />
 
     <ImageButton
         android:background="@null"
@@ -52,9 +93,8 @@
         app:srcCompat="@drawable/fire"
         android:id="@+id/fire_btn"
         tools:ignore="ContentDescription"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="9dp"
         android:layout_below="@+id/amb_btn"
-        android:layout_alignLeft="@+id/torch_btn"
-        android:layout_alignStart="@+id/torch_btn" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

@@ -22,8 +22,9 @@
         android:icon="@drawable/grandfather"
         android:label="YAPAPUDES"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/CustomTheme">
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,16 +46,17 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".EmergencyActivity" />
-        <activity android:name=".SmsActivity" />
+        <activity android:name=".EmergencyActivity"  />
+        <activity android:name=".SmsActivity"   />
         <activity android:name=".SendSmsActivity" />
-        <activity android:name=".TelActivity" />
-        <activity android:name=".MedicineActivity" />
-        <activity android:name=".TestActivity" />
+        <activity android:name=".TelActivity" android:theme="@style/CustomTheme" />
+        <activity android:name=".MedicineActivity"  />
+        <activity android:name=".TestActivity"  android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".favContacts"
             android:label="@string/title_activity_fav_contacts"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SettingsActivity"  />
     </application>
 
 </manifest>

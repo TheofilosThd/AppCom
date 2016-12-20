@@ -27,7 +27,7 @@ public class SmsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sms);
-
+        getSupportActionBar().setTitle("");
         sms_input = (EditText) findViewById(R.id.sms_input);
         mic_btn = (ImageButton) findViewById(R.id.mic_btn);
         send_btn = (Button) findViewById(R.id.send_btn);

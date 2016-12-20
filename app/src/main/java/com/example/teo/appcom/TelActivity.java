@@ -8,6 +8,7 @@ import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -40,6 +41,8 @@ public class TelActivity extends AppCompatActivity {
 
         telephone_input.setTypeface(null, Typeface.BOLD_ITALIC);
         telephone_input.setTextSize(53);
+
+        getSupportActionBar().setTitle("");
 
         n0_btn.setOnClickListener(new View.OnClickListener() {
             @Override
