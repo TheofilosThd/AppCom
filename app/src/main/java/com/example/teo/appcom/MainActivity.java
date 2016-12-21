@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView dateTime ;
 
     Handler handler=new Handler();
-    int count =0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -132,11 +132,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        set_btn.setOnClickListener(new View.OnClickListener() {
+
+        set_btn.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
-            public void onClick(View view) {
+            public boolean onLongClick(View view) {
                 Intent i = new Intent(MainActivity.this,SettingsActivity.class);
                 startActivity(i);
+                return false;
             }
         });
 

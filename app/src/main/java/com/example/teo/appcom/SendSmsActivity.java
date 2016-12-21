@@ -24,6 +24,8 @@ public class SendSmsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_sms);
+        getSupportActionBar().setTitle("");
+
         Bundle bundle = getIntent().getExtras();
         sms = bundle.getString("sms");
 
@@ -33,7 +35,7 @@ public class SendSmsActivity extends AppCompatActivity {
         ImageButton[] contact = new ImageButton[6];
         TextView[] contactt = new TextView[6];
         String[] number = {"11", "22", "33", "44" ,"55", "66"};
-        String[] name = {"ΓΕΩΡΓΙΑ", "ΣΟΥΛΑ", "ΓΙΩΡΓΟΣ", "ΧΡΗΣΤΟΣ" ,"ΘΕΟΦΙΛΟΣ", "ΚΩΝΣΤΑΝΤΙΝΑ"};
+        String[] name = {"ΕΠΑΦΗ 1", "ΕΠΑΦΗ 2", "ΕΠΑΦΗ 3", "ΕΠΑΦΗ 4" ,"ΕΠΑΦΗ 5", "ΕΠΑΦΗ 6"};
         int[] pic = new int[] { R.drawable.person1, R.drawable.person2, R.drawable.person3, R.drawable.person4, R.drawable.person5, R.drawable.person6 };
 
 
