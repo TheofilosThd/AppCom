@@ -25,38 +25,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <ImageButton
-        android:background="@null"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/sms"
-        android:id="@+id/sms_btn"
-        android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/map_btn"
-        android:layout_alignStart="@+id/map_btn"
-        android:layout_marginTop="10dp" />
-
-    <ImageButton
-        android:background="@null"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/contacts"
-        android:id="@+id/con_btn"
-        android:layout_alignTop="@+id/sms_btn"
-        android:layout_alignLeft="@+id/tel_btn"
-        android:layout_alignStart="@+id/tel_btn" />
-
-    <ImageButton
-        android:background="@null"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/sos"
-        android:id="@+id/torch_btn"
-        android:layout_below="@+id/textView6"
-        android:layout_alignLeft="@+id/con_btn"
-        android:layout_alignStart="@+id/con_btn"
-        android:layout_marginTop="12dp" />
-
     <TextView
         android:text="ΤΗΛΕΦΩΝΟ"
         android:layout_width="wrap_content"
@@ -81,56 +49,6 @@
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:layout_width="wrap_content" />
 
-    <TextView
-        android:text="ΜΗΝΥΜΑ"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView5"
-        android:layout_below="@+id/sms_btn"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_alignEnd="@+id/textView2"
-        android:textAppearance="@style/TextAppearance.AppCompat" />
-
-    <TextView
-        android:text="ΕΠΑΦΕΣ"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView6"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:layout_below="@+id/con_btn"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_alignStart="@+id/textView4" />
-
-    <TextView
-        android:text="ΦΑΡΜΑΚΑ"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView8"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:layout_below="@+id/med_btn"
-        android:layout_alignRight="@+id/textView5"
-        android:layout_alignEnd="@+id/textView5" />
-
-    <ImageButton
-        android:background="@null"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/medicine"
-        android:id="@+id/med_btn"
-        android:layout_above="@+id/textView9"
-        android:layout_alignLeft="@+id/sms_btn"
-        android:layout_alignStart="@+id/sms_btn" />
-
-    <TextView
-        android:text="ΕΚΤΑΚΤΗ ΑΝΑΓΚΗ"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView9"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:layout_below="@+id/torch_btn"
-        android:layout_alignLeft="@+id/torch_btn"
-        android:layout_alignStart="@+id/torch_btn" />
-
     <ImageButton
         android:background="@null"
         android:layout_width="wrap_content"
@@ -142,5 +60,90 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="ΕΚΤΑΚΤΗ ΑΝΑΓΚΗ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView9"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/torch_btn"
+        android:layout_alignStart="@+id/torch_btn" />
+
+    <TextView
+        android:text="ΦΑΡΜΑΚΑ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView8"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_alignBaseline="@+id/textView9"
+        android:layout_alignBottom="@+id/textView9"
+        android:layout_alignRight="@+id/textView5"
+        android:layout_alignEnd="@+id/textView5" />
+
+    <ImageButton
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/sos"
+        android:id="@+id/torch_btn"
+        android:layout_alignTop="@+id/med_btn"
+        android:layout_alignLeft="@+id/con_btn"
+        android:layout_alignStart="@+id/con_btn" />
+
+    <ImageButton
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/medicine"
+        android:id="@+id/med_btn"
+        android:layout_below="@+id/textView5"
+        android:layout_alignLeft="@+id/sms_btn"
+        android:layout_alignStart="@+id/sms_btn"
+        android:layout_marginTop="17dp" />
+
+    <TextView
+        android:text="ΜΗΝΥΜΑ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_below="@+id/sms_btn"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:text="ΕΠΑΦΕΣ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_alignBaseline="@+id/textView5"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4" />
+
+    <ImageButton
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/sms"
+        android:id="@+id/sms_btn"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/map_btn"
+        android:layout_alignStart="@+id/map_btn" />
+
+    <ImageButton
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/contacts"
+        android:id="@+id/con_btn"
+        android:layout_alignTop="@+id/sms_btn"
+        android:layout_alignLeft="@+id/tel_btn"
+        android:layout_alignStart="@+id/tel_btn" />
 
 </RelativeLayout>
