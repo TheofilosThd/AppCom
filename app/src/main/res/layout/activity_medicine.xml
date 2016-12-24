@@ -8,57 +8,6 @@
     tools:context="com.example.teo.appcom.MedicineActivity">
 
     <TextView
-        android:text="  2"
-        android:background="@color/white"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:id="@+id/textView27"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_marginRight="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_alignBottom="@+id/imageButton4"
-        android:layout_alignRight="@+id/day"
-        android:layout_alignEnd="@+id/day" />
-
-    <ImageButton
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        app:srcCompat="@drawable/check"
-        android:id="@+id/imageButton8"
-        android:layout_alignBottom="@+id/textView23"
-        android:layout_alignLeft="@+id/imageButton6"
-        android:layout_alignStart="@+id/imageButton6" />
-
-    <ImageButton
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        app:srcCompat="@drawable/check"
-        android:id="@+id/imageButton6"
-        android:layout_alignBottom="@+id/textView22"
-        android:layout_alignLeft="@+id/imageButton5"
-        android:layout_alignStart="@+id/imageButton5" />
-
-    <ImageButton
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        app:srcCompat="@drawable/check"
-        android:id="@+id/imageButton5"
-        android:layout_alignBottom="@+id/textView21"
-        android:layout_alignLeft="@+id/imageButton4"
-        android:layout_alignStart="@+id/imageButton4" />
-
-    <ImageButton
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        app:srcCompat="@drawable/check"
-        android:id="@+id/imageButton4"
-        android:layout_alignBottom="@+id/textView20"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="9dp"
-        android:layout_marginEnd="9dp" />
-
-    <TextView
         android:textSize="45sp"
         android:layout_height="60dp"
         android:id="@+id/day"
@@ -68,48 +17,13 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text=" ΦΑΡΜΑΚΟ 5 :"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:id="@+id/textView24"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_below="@+id/textView23"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:text=" ΦΑΡΜΑΚΟ 4 :"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="33dp"
-        android:id="@+id/textView23"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_below="@+id/textView22"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:text=" ΦΑΡΜΑΚΟ 3 :"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:id="@+id/textView22"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_below="@+id/textView21"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
         android:text=" ΦΑΡΜΑΚΟ 2 :"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="34dp"
         android:id="@+id/textView21"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_below="@+id/textView20"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/textView20" />
 
     <TextView
         android:text=" ΦΑΡΜΑΚΟ 1 :"
@@ -122,102 +36,151 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <ImageButton
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        app:srcCompat="@drawable/check"
-        android:id="@+id/imageButton7"
-        android:layout_alignBottom="@+id/textView15"
-        android:layout_alignLeft="@+id/imageButton8"
-        android:layout_alignStart="@+id/imageButton8" />
-
-    <ImageButton
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        app:srcCompat="@drawable/check"
-        android:id="@+id/imageButton2"
-        android:layout_alignBottom="@+id/textView24"
-        android:layout_alignLeft="@+id/imageButton8"
-        android:layout_alignStart="@+id/imageButton8" />
-
-    <TextView
-        android:text=" ΦΑΡΜΑΚΟ 6 :"
+    <Button
+        android:text="20:30"
+        android:background="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView15"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_marginBottom="17dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignBottom="@+id/med2_1"
+        android:layout_alignLeft="@+id/med1_2"
+        android:layout_alignStart="@+id/med1_2"
+        android:id="@+id/med2_2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <Button
+        android:text="9 : 00 "
+        android:background="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/med4_1"
+        android:layout_alignBaseline="@+id/textView22"
+        android:layout_alignBottom="@+id/textView22"
+        android:layout_alignLeft="@+id/med3_1"
+        android:layout_alignStart="@+id/med3_1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <TextView
-        android:text="ΠΟΣΟΤΗΤΑ "
+        android:text="ΩΡΑ"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView25"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="16dp"
         android:layout_below="@+id/day"
-        android:layout_toLeftOf="@+id/imageButton4"
-        android:layout_toStartOf="@+id/imageButton4"
-        android:layout_marginRight="13dp"
-        android:layout_marginEnd="13dp" />
+        android:layout_alignRight="@+id/med1_1"
+        android:layout_alignEnd="@+id/med1_1"
+        android:layout_marginRight="18dp"
+        android:layout_marginEnd="18dp" />
 
     <TextView
-        android:text="  1"
-        android:background="@color/white"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:id="@+id/textView26"
+        android:text=" ΦΑΡΜΑΚΟ 4 :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:id="@+id/textView22"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_above="@+id/textView22"
-        android:layout_alignLeft="@+id/textView27"
-        android:layout_alignStart="@+id/textView27" />
+        android:layout_below="@+id/med3_1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="  2"
-        android:background="@color/white"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:id="@+id/textView28"
+        android:text=" ΦΑΡΜΑΚΟ 3 :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:id="@+id/textView15"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_above="@+id/textView23"
-        android:layout_alignLeft="@+id/textView26"
-        android:layout_alignStart="@+id/textView26" />
+        android:layout_below="@+id/med2_1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-    <TextView
-        android:text="  3"
+    <Button
+        android:text="17 : 00"
         android:background="@color/white"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:id="@+id/textView29"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_above="@+id/textView24"
-        android:layout_alignLeft="@+id/textView28"
-        android:layout_alignStart="@+id/textView28" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:id="@+id/med4_3"
+        android:layout_below="@+id/med4_1"
+        android:layout_alignLeft="@+id/med4_1"
+        android:layout_alignStart="@+id/med4_1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <TextView
-        android:text="  1"
+    <Button
+        android:text="10 : 30"
         android:background="@color/white"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:id="@+id/textView30"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_alignBottom="@+id/textView24"
-        android:layout_alignLeft="@+id/textView29"
-        android:layout_alignStart="@+id/textView29" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/med2_1"
+        android:layout_alignBaseline="@+id/textView21"
+        android:layout_alignBottom="@+id/textView21"
+        android:layout_alignLeft="@+id/med1_1"
+        android:layout_alignStart="@+id/med1_1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <TextView
-        android:text="  2"
+    <Button
+        android:text="8 : 00"
         android:background="@color/white"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/med1_1"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_alignBaseline="@+id/textView20"
+        android:layout_alignBottom="@+id/textView20"
+        android:layout_toRightOf="@+id/textView20"
+        android:layout_toEndOf="@+id/textView20"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp" />
+
+    <Button
+        android:text="18 : 00"
+        android:background="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/med1_2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_alignBaseline="@+id/med1_1"
+        android:layout_alignBottom="@+id/med1_1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="14 : 00 "
+        android:background="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/med3_1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_alignBaseline="@+id/textView15"
         android:layout_alignBottom="@+id/textView15"
-        android:layout_alignLeft="@+id/textView30"
-        android:layout_alignStart="@+id/textView30" />
+        android:layout_alignLeft="@+id/med2_1"
+        android:layout_alignStart="@+id/med2_1"
+        android:layout_alignRight="@+id/med2_1"
+        android:layout_alignEnd="@+id/med2_1" />
+
+    <Button
+        android:text="19 : 00"
+        android:background="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/med4_4"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_alignBaseline="@+id/med4_3"
+        android:layout_alignBottom="@+id/med4_3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="12 : 00"
+        android:background="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/med4_2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_alignBaseline="@+id/med4_1"
+        android:layout_alignBottom="@+id/med4_1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>

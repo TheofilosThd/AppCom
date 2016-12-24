@@ -2,7 +2,9 @@ package com.example.teo.appcom;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.os.Handler;
 import android.speech.RecognizerIntent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,7 +15,11 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Locale;
+import java.util.TimeZone;
 
 public class SmsActivity extends AppCompatActivity {
 
@@ -22,12 +28,26 @@ public class SmsActivity extends AppCompatActivity {
     private Button send_btn;
     protected static final int RESULT_SPEECH =1;
     public String sms_string;
+    private TextView dateTime ;
+
+    Handler handler=new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sms);
-        getSupportActionBar().setTitle("");
+
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.custom_datetime);
+        //getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#000000\" >" +currentDate + "</font>")));
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        View view =getSupportActionBar().getCustomView();
+        handler.post(updateTextRunnable);
+        // getSupportActionBar().setTitle("");
+        dateTime = (TextView) findViewById(R.id.datetime);
+
         sms_input = (EditText) findViewById(R.id.sms_input);
         mic_btn = (ImageButton) findViewById(R.id.mic_btn);
         send_btn = (Button) findViewById(R.id.send_btn);
@@ -84,5 +104,16 @@ public class SmsActivity extends AppCompatActivity {
 
         }
     }
+
+    Runnable updateTextRunnable=new Runnable(){
+        public void run() {
+            Calendar c = Calendar.getInstance(TimeZone.getTimeZone("GMT"), Locale.getDefault());
+            SimpleDateFormat df = new SimpleDateFormat("  dd/MM/yyyy HH:mm ");
+            String currentDate = df.format(c.getTime());
+            dateTime.setText(currentDate);
+            dateTime.setTextSize(25);
+            handler.postDelayed(this, 1000);
+        }
+    };
 
 }

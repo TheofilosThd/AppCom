@@ -11,12 +11,19 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Handler;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+import java.util.TimeZone;
 
 import static android.R.id.message;
 
@@ -35,12 +42,26 @@ public class EmergencyActivity extends AppCompatActivity {
     private String sos_phone = "2";
     private String sos_message = "HELP!!!";
 
+    private TextView dateTime ;
+
+    Handler handler=new Handler();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emergency);
-        getSupportActionBar().setTitle("");
+
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.custom_datetime);
+        //getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#000000\" >" +currentDate + "</font>")));
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        View view =getSupportActionBar().getCustomView();
+        handler.post(updateTextRunnable);
+       // getSupportActionBar().setTitle("");
+        dateTime = (TextView) findViewById(R.id.datetime);
         police_btn = (ImageButton) findViewById(R.id.police_btn);
         fire_btn = (ImageButton) findViewById(R.id.fire_btn);
         amb_button = (ImageButton) findViewById(R.id.amb_btn);
@@ -52,7 +73,7 @@ public class EmergencyActivity extends AppCompatActivity {
         clickBtn(amb_button, "1666");
         clickBtn(amb_button, "1666");
 
-
+/*
         hasFlash = getApplicationContext().getPackageManager()
                 .hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH);
 
@@ -74,24 +95,24 @@ public class EmergencyActivity extends AppCompatActivity {
         }
 
         getCamera();
-
+*/
         torch_btn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                if (isFlashOn) {
+                //if (isFlashOn) {
                     // turn off flash
-                    turnOffFlash();
-                } else {
+                   // turnOffFlash();
+                //} else {
                     // turn on flash
-                    turnOnFlash();
+                   // turnOnFlash();
                     android.telephony.SmsManager smsManager = android.telephony.SmsManager.getDefault();
                     String loc = myLoc();
                     sos_message = "ΚΙΝΔΥΝΕΥΩ!!! Βρίσκομαι στην τοποθεσία : "+loc;
                     smsManager.sendTextMessage(sos_phone, null, sos_message, null, null);
                     Toast.makeText(getApplicationContext(), "ΣΤΑΛΘΗΚΕ ΣΗΜΑ ΚΙΝΔΥΝΟΥ.", Toast.LENGTH_LONG).show();
 
-                }
+               // }
 
 
             }
@@ -224,6 +245,15 @@ public class EmergencyActivity extends AppCompatActivity {
         return message;
     }
 
-
+    Runnable updateTextRunnable=new Runnable(){
+        public void run() {
+            Calendar c = Calendar.getInstance(TimeZone.getTimeZone("GMT"), Locale.getDefault());
+            SimpleDateFormat df = new SimpleDateFormat("  dd/MM/yyyy HH:mm ");
+            String currentDate = df.format(c.getTime());
+            dateTime.setText(currentDate);
+            dateTime.setTextSize(25);
+            handler.postDelayed(this, 1000);
+        }
+    };
 
 }

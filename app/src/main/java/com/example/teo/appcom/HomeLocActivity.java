@@ -15,21 +15,19 @@ import java.util.Calendar;
 import java.util.Locale;
 import java.util.TimeZone;
 
-public class AddContactActivity extends AppCompatActivity {
+public class HomeLocActivity extends AppCompatActivity {
 
-
-    Button save_btn;
-    EditText name_text,lastname_text,tel_text;
+    Button save_btn ;
+    EditText loc_text;
 
     private TextView dateTime ;
 
     Handler handler=new Handler();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_contact);
+        setContentView(R.layout.activity_home_loc);
 
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.custom_datetime);
@@ -43,32 +41,28 @@ public class AddContactActivity extends AppCompatActivity {
         dateTime = (TextView) findViewById(R.id.datetime);
 
         save_btn = (Button) findViewById(R.id.save_btn);
-        name_text = (EditText) findViewById(R.id.name_text);
-        lastname_text = (EditText) findViewById(R.id.lastname_text);
-        tel_text = (EditText) findViewById(R.id.tel_text);
+        loc_text =(EditText) findViewById(R.id.loc_text);
 
         save_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(name_text.getText().length() ==0 || lastname_text.getText().length() == 0 || tel_text.getText().length() ==0){
-                    messageError();
-                }else{
+                if(loc_text.getText().length()!=0) {
                     messageOk();
                     finish();
+                }else{
+                    messageError();
                 }
             }
         });
-
-
     }
 
     public void messageOk(){
-        Toast.makeText(AddContactActivity.this, "Η επαφή προστέθηκε επιτυχώς.",
+        Toast.makeText(HomeLocActivity.this, "Η διεύθυνση διαμονής άλλαξε επιτυχώς",
                 Toast.LENGTH_LONG).show();
     }
 
     public void messageError(){
-        Toast.makeText(AddContactActivity.this, "Παρακαλώ συμπληρώστε όλα τα πεδία.",
+        Toast.makeText(HomeLocActivity.this, "Παρακαλώ πλήκτρολογήστε έγκυρη διεύθυνση",
                 Toast.LENGTH_LONG).show();
     }
 

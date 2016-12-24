@@ -20,7 +20,7 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/grandfather"
-        android:label="YAPAPUDES"
+        android:label="olderUI"
         android:supportsRtl="true"
         android:theme="@style/CustomTheme">
         <activity android:name=".MainActivity">
@@ -61,7 +61,9 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".AddContactActivity" />
-        <activity android:name=".RemoveContactActivity" ></activity>
+        <activity android:name=".RemoveContactActivity" />
+        <activity android:name=".HomeLocActivity" />
+        <activity android:name=".MedSetActivity"></activity>
     </application>
 
 </manifest>

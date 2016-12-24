@@ -49,6 +49,12 @@ public class SettingsActivity extends AppCompatActivity {
                     } if(i==1){
                         Intent intent = new Intent(SettingsActivity.this,RemoveContactActivity.class);
                         startActivity(intent);
+                    }if(i==2){
+                        Intent intent = new Intent(SettingsActivity.this,MedSetActivity.class);
+                        startActivity(intent);
+                    }if(i==3){
+                        Intent intent = new Intent(SettingsActivity.this,HomeLocActivity.class);
+                        startActivity(intent);
                     }
                 }
             });

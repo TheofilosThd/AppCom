@@ -71,7 +71,7 @@
         android:inputType="textPersonName"
         android:background="@color/white"
         android:ems="10"
-        android:id="@+id/editText5"
+        android:id="@+id/name_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
         android:layout_alignTop="@+id/textView17"
         android:layout_toRightOf="@+id/textView14"
@@ -85,11 +85,11 @@
         android:inputType="textPersonName"
         android:background="@color/white"
         android:ems="10"
-        android:id="@+id/editText4"
+        android:id="@+id/lastname_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
         android:layout_alignTop="@+id/textView18"
-        android:layout_alignLeft="@+id/editText5"
-        android:layout_alignStart="@+id/editText5" />
+        android:layout_alignLeft="@+id/name_text"
+        android:layout_alignStart="@+id/name_text" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -97,12 +97,12 @@
         android:background="@color/white"
         android:inputType="phone"
         android:ems="10"
-        android:id="@+id/editText6"
+        android:id="@+id/tel_text"
         android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
         android:layout_alignBaseline="@+id/textView14"
         android:layout_alignBottom="@+id/textView14"
-        android:layout_alignLeft="@+id/editText4"
-        android:layout_alignStart="@+id/editText4" />
+        android:layout_alignLeft="@+id/lastname_text"
+        android:layout_alignStart="@+id/lastname_text" />
 
     <TextView
         android:text="Φωτογραφία :"
@@ -110,7 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
         android:id="@+id/textView19"
-        android:layout_below="@+id/editText6"
+        android:layout_below="@+id/tel_text"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
@@ -131,7 +131,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="52dp"
-        android:id="@+id/button2"
+        android:id="@+id/save_btn"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:elevation="0dp"
         style="@android:style/Widget.Holo.Light.Button.Small"

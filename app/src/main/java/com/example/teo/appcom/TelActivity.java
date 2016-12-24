@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.media.Image;
 import android.net.Uri;
+import android.os.Handler;
 import android.provider.ContactsContract;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,16 +16,37 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+import java.util.TimeZone;
+
 public class TelActivity extends AppCompatActivity {
 
     private TextView telephone_input;
     private ImageButton n0_btn,n1_btn,n2_btn,n3_btn,n4_btn,n5_btn,n6_btn,n7_btn,n8_btn,n9_btn;
     private ImageButton call_btn,delete_btn;
     String tel_string="";
+
+    private TextView dateTime ;
+
+    Handler handler=new Handler();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tel);
+
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.custom_datetime);
+        //getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#000000\" >" +currentDate + "</font>")));
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        View view =getSupportActionBar().getCustomView();
+        handler.post(updateTextRunnable);
+        // getSupportActionBar().setTitle("");
+        dateTime = (TextView) findViewById(R.id.datetime);
 
         telephone_input = (TextView) findViewById(R.id.telephone_input);
         n0_btn =(ImageButton) findViewById(R.id.n0_btn);
@@ -42,7 +65,6 @@ public class TelActivity extends AppCompatActivity {
         telephone_input.setTypeface(null, Typeface.BOLD_ITALIC);
         telephone_input.setTextSize(53);
 
-        getSupportActionBar().setTitle("");
 
         n0_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -153,4 +175,15 @@ public class TelActivity extends AppCompatActivity {
         }
         return tel;
     }
+
+    Runnable updateTextRunnable=new Runnable(){
+        public void run() {
+            Calendar c = Calendar.getInstance(TimeZone.getTimeZone("GMT"), Locale.getDefault());
+            SimpleDateFormat df = new SimpleDateFormat("  dd/MM/yyyy HH:mm ");
+            String currentDate = df.format(c.getTime());
+            dateTime.setText(currentDate);
+            dateTime.setTextSize(25);
+            handler.postDelayed(this, 1000);
+        }
+    };
 }

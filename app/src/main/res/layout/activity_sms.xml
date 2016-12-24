@@ -8,48 +8,6 @@
     android:background="@color/bg"
     android:orientation="vertical" >
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:layout_below="@+id/sms_input"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp">
-
-        <ImageButton
-            android:id="@+id/mic_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:src="@drawable/mic" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/tap_on_mic"
-
-            android:textSize="25dp"
-            android:textStyle="normal" />
-    </LinearLayout>
-
-    <Button
-        android:text="ΑΠΟΣΤΟΛΗ ΣΕ : "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="23dp"
-        android:background="@color/blue"
-        android:id="@+id/send_btn"
-        android:textColor="@color/white"
-        style="@android:style/Widget.Holo.Light.Button.Borderless.Small"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:elevation="7dp"
-        android:visibility="visible"
-        />
-
     <EditText
         android:background="@color/white"
         android:id="@+id/sms_input"
@@ -76,5 +34,54 @@
         android:layout_marginTop="19dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_above="@+id/send_btn"
+        android:layout_centerHorizontal="true">
+
+    </LinearLayout>
+
+    <Button
+        android:text="ΑΠΟΣΤΟΛΗ ΣΕ : "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:id="@+id/send_btn"
+        android:textColor="@color/white"
+        style="@android:style/Widget.Holo.Light.Button.Borderless.Small"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:elevation="7dp"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp" />
+
+    <ImageButton
+        android:id="@+id/mic_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@drawable/micro2"
+        android:layout_above="@+id/send_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/tap_on_mic"
+
+        android:textSize="25dp"
+        android:textStyle="normal"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_below="@+id/sms_input"
+        android:layout_alignRight="@+id/sms_input"
+        android:layout_alignEnd="@+id/sms_input" />
 
 </RelativeLayout>
