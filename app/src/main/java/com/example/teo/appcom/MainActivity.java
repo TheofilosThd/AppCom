@@ -3,7 +3,10 @@ package com.example.teo.appcom;
 
 import android.content.ComponentName;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.BatteryManager;
 import android.os.Handler;
 import android.support.annotation.DrawableRes;
 import android.support.v7.app.ActionBar;
@@ -40,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        boolean flag =true;
 
 
 
@@ -63,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         handler.post(updateTextRunnable);
-
+handler.post(checkBattery);
 
         // getSupportActionBar().setIcon(R.drawable.setting);
 
@@ -153,6 +156,36 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(this, 1000);
         }
     };
+    boolean flag =true;
+
+    Runnable checkBattery=new Runnable(){
+        public void run() {
+            if(getBatteryLevel()==50 && flag ==true){
+                MediaPlayer mPlayer = MediaPlayer.create(MainActivity.this, R.raw.low_battery);
+                mPlayer.start();
+                flag=false;
+            }
+            handler.postDelayed(this, 10000);
+        }
+    };
+
+
+    public int getBatteryLevel(){
+        Intent batteryIntent = MainActivity.this.getApplicationContext().registerReceiver(null,
+                new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+
+        int level = batteryIntent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
+        int scale = batteryIntent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+
+        float batteryPct = ((float)level / (float)scale) * 100.0f;
+
+        int bt = (int) batteryPct;
+
+        System.out.println(bt);
+
+        return  bt;
+    }
+
 
     }
 
