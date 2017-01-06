@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.custom_action_bar_layout);
         //getSupportActionBar().setTitle((Html.fromHtml("<font color=\"#000000\" >" +currentDate + "</font>")));
@@ -66,20 +67,27 @@ public class MainActivity extends AppCompatActivity {
 
 
         handler.post(updateTextRunnable);
-handler.post(checkBattery);
+        handler.post(checkBattery);
 
         // getSupportActionBar().setIcon(R.drawable.setting);
 
         tel_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 /*
                 Intent callIntent = new Intent(Intent.ACTION_DIAL);
                 callIntent.setData(Uri.parse("tel:"));
                 startActivity(callIntent);
                 */
+                TelActivity tel = new TelActivity();
                 Intent i = new Intent(MainActivity.this,TelActivity.class);
+                MediaPlayer mPlayer = MediaPlayer.create(MainActivity.this, R.raw.tel_message);
+                mPlayer.start();
                 startActivity(i);
+
+
+
             }
         });
 
@@ -97,7 +105,8 @@ handler.post(checkBattery);
                 String uri = "google.navigation:q=%f, %f";
                 Intent navIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(String
                         .format(Locale.US, uri, 37.994038, 23.732468)));
-
+                MediaPlayer mPlayer = MediaPlayer.create(MainActivity.this, R.raw.lost_message);
+                mPlayer.start();
                     startActivity(navIntent);
 
             }
@@ -107,6 +116,8 @@ handler.post(checkBattery);
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, EmergencyActivity.class);
+                MediaPlayer mPlayer = MediaPlayer.create(MainActivity.this, R.raw.em_message);
+                mPlayer.start();
                 startActivity(i);
             }
         });
@@ -115,6 +126,8 @@ handler.post(checkBattery);
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this,SmsActivity.class);
+                MediaPlayer mPlayer = MediaPlayer.create(MainActivity.this, R.raw.sms_message);
+                mPlayer.start();
                 startActivity(i);
             }
         });
@@ -123,6 +136,8 @@ handler.post(checkBattery);
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this,favContacts.class);
+                MediaPlayer mPlayer = MediaPlayer.create(MainActivity.this, R.raw.con_message);
+                mPlayer.start();
                 startActivity(i);
             }
         });
@@ -132,6 +147,7 @@ handler.post(checkBattery);
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this,MedicineActivity.class);
                 startActivity(i);
+
             }
         });
 
@@ -160,7 +176,7 @@ handler.post(checkBattery);
 
     Runnable checkBattery=new Runnable(){
         public void run() {
-            if(getBatteryLevel()==50 && flag ==true){
+            if(getBatteryLevel()==15 && flag ==true){
                 MediaPlayer mPlayer = MediaPlayer.create(MainActivity.this, R.raw.low_battery);
                 mPlayer.start();
                 flag=false;
@@ -180,8 +196,6 @@ handler.post(checkBattery);
         float batteryPct = ((float)level / (float)scale) * 100.0f;
 
         int bt = (int) batteryPct;
-
-        System.out.println(bt);
 
         return  bt;
     }

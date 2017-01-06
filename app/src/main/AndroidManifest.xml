@@ -63,7 +63,9 @@
         <activity android:name=".AddContactActivity" />
         <activity android:name=".RemoveContactActivity" />
         <activity android:name=".HomeLocActivity" />
-        <activity android:name=".MedSetActivity"></activity>
+        <activity android:name=".MedSetActivity" />
+        <activity android:name=".SoundSetActivity" />
+        <activity android:name=".FamilyMemTelActivity"></activity>
     </application>
 
 </manifest>

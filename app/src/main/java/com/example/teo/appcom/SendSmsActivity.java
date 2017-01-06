@@ -88,11 +88,11 @@ public class SendSmsActivity extends AppCompatActivity {
         try {
             android.telephony.SmsManager smsManager = android.telephony.SmsManager.getDefault();
             smsManager.sendTextMessage(tel, null, sms, null, null);
-            Toast.makeText(getApplicationContext(), "SMS sent.", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "ΤΟ ΜΗΝΥΜΑ ΣΤΑΛΘΗΚΕ", Toast.LENGTH_LONG).show();
         }
 
         catch (Exception e) {
-            Toast.makeText(getApplicationContext(), "SMS failed, please try again."+sms+tel, Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "ΤΟ ΜΗΝΥΜΑ ΔΕΝ ΣΤΑΛΘΗΚΕ. ΠΡΟΣΠΑΘΗΣΤΕ ΞΑΝΑ."+sms+tel, Toast.LENGTH_LONG).show();
             e.printStackTrace();
         }
     }

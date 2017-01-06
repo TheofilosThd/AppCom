@@ -29,8 +29,10 @@ public class SettingsActivity extends AppCompatActivity {
             String[] settings = new String[] {
                     "Προσθήκη Επαφής",
                     "Αφαίρεση Επαφής",
-                    "Επεξεργασίας λίστας φαρμάκων",
-                    "Τόπος Διαμονής"
+                    "Επεξεργασία λίστας φαρμάκων",
+                    "Τόπος Διαμονής",
+                    "Ρυθμίσεις ήχου",
+                    "Ορισμός συγγενή έκ. ανάγκης"
             };
 
             final List<String> settings_list = new ArrayList<String>(Arrays.asList(settings));
@@ -54,6 +56,14 @@ public class SettingsActivity extends AppCompatActivity {
                         startActivity(intent);
                     }if(i==3){
                         Intent intent = new Intent(SettingsActivity.this,HomeLocActivity.class);
+                        startActivity(intent);
+                    }
+                    if(i==4){
+                        Intent intent = new Intent(SettingsActivity.this,SoundSetActivity.class);
+                        startActivity(intent);
+                    }
+                    if(i==5){
+                        Intent intent = new Intent(SettingsActivity.this,FamilyMemTelActivity.class);
                         startActivity(intent);
                     }
                 }

@@ -3,6 +3,7 @@ package com.example.teo.appcom;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.media.Image;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Handler;
 import android.provider.ContactsContract;
@@ -28,6 +29,7 @@ public class TelActivity extends AppCompatActivity {
     private ImageButton call_btn,delete_btn;
     String tel_string="";
 
+
     private TextView dateTime ;
 
     Handler handler=new Handler();
@@ -36,6 +38,8 @@ public class TelActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tel);
+
+
 
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.custom_datetime);
@@ -69,14 +73,19 @@ public class TelActivity extends AppCompatActivity {
         n0_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                MediaPlayer mPlayer = MediaPlayer.create(TelActivity.this, R.raw.zero);
+                mPlayer.start();
                 tel_string+="0";
                 telephone_input.setText(tel_string);
+
             }
         });
 
         n1_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                MediaPlayer mPlayer = MediaPlayer.create(TelActivity.this, R.raw.one);
+                mPlayer.start();
                 tel_string+="1";
                 telephone_input.setText(tel_string);
             }
@@ -85,6 +94,8 @@ public class TelActivity extends AppCompatActivity {
         n2_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                MediaPlayer mPlayer = MediaPlayer.create(TelActivity.this, R.raw.two);
+                mPlayer.start();
                 tel_string+="2";
                 telephone_input.setText(tel_string);
             }
@@ -93,6 +104,8 @@ public class TelActivity extends AppCompatActivity {
         n3_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                MediaPlayer mPlayer = MediaPlayer.create(TelActivity.this, R.raw.three);
+                mPlayer.start();
                 tel_string+="3";
                 telephone_input.setText(tel_string);
             }
@@ -101,6 +114,8 @@ public class TelActivity extends AppCompatActivity {
         n4_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                MediaPlayer mPlayer = MediaPlayer.create(TelActivity.this, R.raw.four);
+                mPlayer.start();
                 tel_string+="4";
                 telephone_input.setText(tel_string);
             }
@@ -109,6 +124,8 @@ public class TelActivity extends AppCompatActivity {
         n5_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                MediaPlayer mPlayer = MediaPlayer.create(TelActivity.this, R.raw.five);
+                mPlayer.start();
                 tel_string+="5";
                 telephone_input.setText(tel_string);
             }
@@ -117,6 +134,8 @@ public class TelActivity extends AppCompatActivity {
         n6_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                MediaPlayer mPlayer = MediaPlayer.create(TelActivity.this, R.raw.six);
+                mPlayer.start();
                 tel_string+="6";
                 telephone_input.setText(tel_string);
             }
@@ -125,6 +144,8 @@ public class TelActivity extends AppCompatActivity {
         n7_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                MediaPlayer mPlayer = MediaPlayer.create(TelActivity.this, R.raw.seven);
+                mPlayer.start();
                 tel_string+="7";
                 telephone_input.setText(tel_string);
             }
@@ -133,6 +154,8 @@ public class TelActivity extends AppCompatActivity {
         n8_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                MediaPlayer mPlayer = MediaPlayer.create(TelActivity.this, R.raw.eight);
+                mPlayer.start();
                 tel_string+="8";
                 telephone_input.setText(tel_string);
             }
@@ -141,6 +164,8 @@ public class TelActivity extends AppCompatActivity {
         n9_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                MediaPlayer mPlayer = MediaPlayer.create(TelActivity.this, R.raw.nine);
+                mPlayer.start();
                 tel_string+="9";
                 telephone_input.setText(tel_string);
             }
@@ -186,4 +211,6 @@ public class TelActivity extends AppCompatActivity {
             handler.postDelayed(this, 1000);
         }
     };
+
+
 }

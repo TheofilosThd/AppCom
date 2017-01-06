@@ -30,6 +30,7 @@ public class MedicineActivity extends AppCompatActivity{
    // ListView list;
     TextView day;
     Button med1_1,med1_2,med2_1,med2_2,med3_1,med4_1,med4_2,med4_3,med4_4;
+    boolean b1=false,b2=false,b3=false,b4=false,b5=false,b6=false,b7=false,b8=false,b9=false;
     private TextView dateTime ;
 
     Handler handler=new Handler();
@@ -75,8 +76,14 @@ public class MedicineActivity extends AppCompatActivity{
         med1_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+            if(b1==false) {
                 changeBtnColor(med1_1);
+                b1 = true;
+            }else if(b1==true){
+                resetBtnColor(med1_1);
+                b1=false;
+            }
+
             }
 
         });
@@ -84,56 +91,104 @@ public class MedicineActivity extends AppCompatActivity{
         med1_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                changeBtnColor(med1_2);
+                if(b2==false) {
+                    changeBtnColor(med1_2);
+                    b2 = true;
+                }else if(b2==true){
+                    resetBtnColor(med1_2);
+                    b2=false;
+                }
             }
         });
 
         med2_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                changeBtnColor(med2_1);
+                if(b3==false) {
+                    changeBtnColor(med2_1);
+                    b3 = true;
+                }else if(b3==true){
+                    resetBtnColor(med2_1);
+                    b3=false;
+                }
             }
         });
 
         med2_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                changeBtnColor(med2_2);
+                if(b4==false) {
+                    changeBtnColor(med2_2);
+                    b4 = true;
+                }else if(b4==true){
+                    resetBtnColor(med2_2);
+                    b4=false;
+                }
             }
         });
 
         med3_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                changeBtnColor(med3_1);
+                if(b5==false) {
+                    changeBtnColor(med3_1);
+                    b5 = true;
+                }else if(b5==true){
+                    resetBtnColor(med3_1);
+                    b5=false;
+                }
             }
         });
 
         med4_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                changeBtnColor(med4_1);
+                if(b6==false) {
+                    changeBtnColor(med4_1);
+                    b6 = true;
+                }else if(b6==true){
+                    resetBtnColor(med4_1);
+                    b6=false;
+                }
             }
         });
 
         med4_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                changeBtnColor(med4_2);
+                if(b7==false) {
+                    changeBtnColor(med4_2);
+                    b7 = true;
+                }else if(b7==true){
+                    resetBtnColor(med4_2);
+                    b7=false;
+                }
             }
         });
 
         med4_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                changeBtnColor(med4_3);
+                if(b8==false) {
+                    changeBtnColor(med4_3);
+                    b8 = true;
+                }else if(b8==true){
+                    resetBtnColor(med4_3);
+                    b8=false;
+                }
             }
         });
 
         med4_4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                changeBtnColor(med4_4);
+                if(b9==false) {
+                    changeBtnColor(med4_4);
+                    b9 = true;
+                }else if(b9==true){
+                    resetBtnColor(med4_4);
+                    b9=false;
+                }
             }
         });
 
@@ -141,6 +196,10 @@ public class MedicineActivity extends AppCompatActivity{
 
     public void changeBtnColor(Button btn){
         btn.setBackgroundColor(Color.parseColor("#7BE46B"));
+    }
+
+    public void resetBtnColor(Button btn){
+        btn.setBackgroundColor(Color.parseColor("#FFFFFF"));
     }
 
     Runnable updateTextRunnable=new Runnable(){
